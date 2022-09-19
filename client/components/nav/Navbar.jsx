@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 import styles from './navbar.module.css'
-import ContactBtn from '../Contact/ContactBtn'
+import ContactBtn from '../contact/ContactBtn'
 
 const Menu = () => (
   <>
@@ -34,7 +34,6 @@ export default function Navbar() {
         </div>
       </div>
       <div className={styles['gpt3__navbar-sign']}>
-        {/* <button className={styles['button-30']} type='button' onClick={() => console.log('hello')}>Contact</button> */}
         <ContactBtn />
       </div>
       <div className={styles['gpt3__navbar-menu']}>

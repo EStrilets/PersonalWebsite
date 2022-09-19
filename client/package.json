@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/style": "^0.8.0",
+    "@emotion/styled": "^11.10.4",
     "@zeit/next-css": "^1.0.1",
     "framer-motion": "^7.3.2",
     "install": "^0.13.0",
