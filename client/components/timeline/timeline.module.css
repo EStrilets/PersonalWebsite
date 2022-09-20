@@ -1,53 +1,132 @@
+.container { 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .step__indicator {
     width: 100%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .step__indicator-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
-  }
-  
-  .step__indicator hr {
-    width: 160px;
-    background: #fafafa;
-    height: 2px;
-    border-width: 0;
-    margin: 0 16px;
-  }
-  
-  .step__indicator hr:last-of-type {
-    display: none;
-  }
-  
-  .step__indicator a {
-  
-  }
-  
-  .step__indicator-link { 
-    text-decoration: none;
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    color: lightblue;
-    box-shadow: 0px 3px 12px rgb(160, 181, 238);
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* cursor: pointer; */
-    cursor: default;
-    user-select: none;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    box-shadow: 4px 4px 8px #43543d, -4px -4px 8px #ccecbb,
+      inset 0px 0px 0px #43543d, inset 0px 0px 0px #c0dcb0;
     position: relative;
-    font-weight: bold;
-    font-size: 18px;
-    transition: all 600ms ease-in-out;
+    cursor: pointer;    
+    transition: all 500ms ease-in-out;
+    font-size: 1rem;
+    color: var(--color-footer);
+    text-decoration: none;
   }
 
   .step__indicator-link-selected {
-    background: lightblue;
-    color: #fff;
+    box-shadow: 0px 0px 0px #5c6d55, 0px 0px 0px #bfe4ab,
+    inset 4px 4px 8px #5c6d55, inset -4px -4px 8px #b2cea3;
+      
   }
 
-  .step__indicator .activeLink {
-    background: lightblue;
-    color: #fff;
+  .card__section {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      top: 4em;
+      overflow: hidden;
+      width: 100%;
+      border-radius: .7em;
+      max-width: 800px;
+      min-width: 300px;
+      cursor: grab;
+      background-color: rgba(136, 252, 210, 0.3);
   }
+ 
+  .year__2019 { 
+    background-color: rgba(254, 193, 221, 0.7);
+  }
+  
+  .year__2020 { 
+    background-color: rgba(225, 254, 247, 0.7); 
+  }
+
+  .year__2021 { 
+    background-color: rgba(255, 252, 224, 0.7);
+    ;
+  }
+
+  .course-preview {
+    color: #fff;
+    padding: 30px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+  }
+
+  .course-info {
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+  }
+  
+  .achievements__text { 
+    list-style: none;
+    font-size: 16px;
+    padding: 0;
+    color: var(--color-footer);
+    font-weight: 500;
+  }
+
+  .achievements__text li { 
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+
+   .achievements__text a { 
+    color:rgb(68, 0, 193)
+  }
+
+.card__button {
+  width: 95%;
+  background-color:rgba(29, 186, 192, 0.669);
+  margin-left: 0.5rem;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: all 300ms ease-in-out;
+}
+
+.card__button:hover {
+  background-color:rgba(18, 142, 146, 0.669);
+}
+
+.card__button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.card__button:focus-visible {
+  box-shadow: none;
+}

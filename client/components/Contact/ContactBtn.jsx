@@ -3,7 +3,7 @@ import styles from './contactbtn.module.css'
 
 export default function ContactBtn() {
   return (
-    <div onClick={() => console.log('hello')} class={styles.spinner}>
+    <div class={styles.spinner}>
       <span>C</span>
       <span>O</span>
       <span>N</span>
