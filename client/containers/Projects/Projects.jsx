@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './card.module.css'
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import styles from './projects.module.css'
 import { FaReact, FaDocker } from "react-icons/fa";
+import CardComponent from '../../components/card/CardComponent';
 import {
   SiRedux,
   SiKubernetes,
@@ -18,33 +18,14 @@ import {
   SiCss3
 } from 'react-icons/si';
 
-const Div = ({ children, newStyles }) => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const rotateX = useTransform(y, [-100, 100], [30, -30]);
-  const rotateY = useTransform(x, [-100, 100], [-30, 30]);
-  return (
-    <motion.div
-      className={newStyles}
-      style={{ x, y, rotateX, rotateY, z: 100 }}
-      drag
-      dragElastic={0.16}
-      dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-      whileTap={{ cursor: 'grabbing' }}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
-export default function Card() {
+export default function Projects() {
   return (
     <main className={styles['grid']}>
-      <Div newStyles={`${styles['card']} ${styles['item1']}`}>
+      <CardComponent newStyles={`${styles['card']} ${styles['item1']}`}>
         <h1>Personal Projects</h1>
         <p>Done with love, dedication and</p>
-      </Div>
-      <Div newStyles={`${styles['card']} ${styles['item2']}`}>
+      </CardComponent>
+      <CardComponent newStyles={`${styles['card']} ${styles['item2']}`}>
       <div className={styles['card__header-container']}>
           <h1>Path Finder</h1>
           <div />
@@ -64,8 +45,8 @@ export default function Card() {
             <SiRedux size='2rem' />
           </div>
         </div>
-      </Div>
-      <Div newStyles={`${styles['card']} ${styles['item3']}`}>
+      </CardComponent>
+      <CardComponent newStyles={`${styles['card']} ${styles['item3']}`}>
         <div className={styles['card__header-container']}>
           <h1>Unifyi</h1>
           <div />
@@ -105,11 +86,11 @@ export default function Card() {
             <SiDigitalocean size='2rem' />
           </div>
         </div>
-      </Div>
-      <Div newStyles={`${styles['card']} ${styles['item4']}`}>
+      </CardComponent>
+      <CardComponent newStyles={`${styles['card']} ${styles['item4']}`}>
         <h2>because interactions make it more fun</h2>
-      </Div>
-      <Div newStyles={`${styles['card']} ${styles['item5']}`}></Div>
+      </CardComponent>
+      <CardComponent newStyles={`${styles['card']} ${styles['item5']}`}></CardComponent>
     </main>
   );
 }

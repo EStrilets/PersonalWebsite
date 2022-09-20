@@ -12,7 +12,6 @@ export default function Links() {
       >
         <div className={styles['container']}>
           <div className={styles['justify-content-center']}>
-            {/* <div className="col-md-10">   */}
             <div className={styles['social-bar']}>
               <div
                 className={`${styles['social-icons']} ${styles['mb-3']} ${styles['iconpad']}`}

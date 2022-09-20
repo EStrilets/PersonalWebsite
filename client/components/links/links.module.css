@@ -106,7 +106,7 @@
   flex-shrink: 0;
   border-radius: 50%;
   text-align: center;
-  background: rgb(42, 29, 80); /* circle color */
+  background: rgb(29, 55, 80); /* circle color */
   cursor: pointer;
   transition: all .4s ease;
 

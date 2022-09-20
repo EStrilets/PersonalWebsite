@@ -1,0 +1,9 @@
+.container {
+    padding: 0 2rem;
+    min-height: 33em;
+  } 
+  
+.wrapper {
+    padding: 1rem;
+    margin: 1rem;
+  }
