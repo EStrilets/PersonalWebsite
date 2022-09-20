@@ -30,7 +30,7 @@ const list2019 = () => {
       <ul className={styles['achievements__text']}>
         <li className={styles['achievements__text']}>
           Participated in{' '}
-          <a href='https://vanstartupweek.ca/' target='_blank'>
+          <a href='https://vanstartupweek.ca/' target='_blank' rel="noreferrer">
             Vancouver Start-up week
           </a>
           {' '} as volunteer
@@ -42,7 +42,7 @@ const list2019 = () => {
         </li>
         <li>
           Participated in{' '}
-          <a href='https://vanstartupweek.ca/' target='_blank'>
+          <a href='https://vanstartupweek.ca/' target='_blank' rel="noreferrer">
             
           </a>
         </li>
@@ -63,7 +63,7 @@ const list2020 = () => {
         </li>
         <li>
           Participated in{' '}
-          <a href='https://vanstartupweek.ca/' target='_blank'>
+          <a href='https://vanstartupweek.ca/' target='_blank' rel="noreferrer">
             
           </a>
         </li>
@@ -98,7 +98,7 @@ const list2022 = () => {
       <ul className={styles['achievements__text']}>
         <li className={styles['achievements__text']}>
           Successfully launched {' '}
-          <a href='https://vanstartupweek.ca/' target='_blank'>
+          <a href='https://vanstartupweek.ca/' target='_blank' rel="noreferrer">
             Unifyi Project,
           </a>{' '}
           website received 900+ visits in 2 months

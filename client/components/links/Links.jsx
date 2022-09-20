@@ -29,6 +29,7 @@ export default function Links() {
                 <a
                   href='https://github.com/EStrilets'
                   target='_blank'
+                  rel="noreferrer"
                   className={styles['slider-nav-item']}
                 >
                   <BsGithub />
@@ -36,6 +37,7 @@ export default function Links() {
                 <a
                   href='https://www.linkedin.com/in/eugene-strilets/'
                   target='_blank'
+                  rel="noreferrer"
                   className={styles['slider-nav-item']}
                 >
                   <BsLinkedin />
