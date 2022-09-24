@@ -129,7 +129,7 @@ const Tabs = ({ router }) => {
   return (
     <div className={styles['container']}>
       <div className={styles['step__indicator']}>
-        <Link href={{ pathname: '/resume', query: { year: '2022' } }}>
+        <Link scroll={false}  href={{ pathname: '/resume', query: { year: '2022' } }}>
           <a
             className={`${styles['step__indicator-link']} ${
               isTabOne && styles['step__indicator-link-selected']
@@ -138,7 +138,7 @@ const Tabs = ({ router }) => {
             2022
           </a>
         </Link>
-        <Link href={{ pathname: '/resume', query: { year: '2021' } }}>
+        <Link scroll={false}  href={{ pathname: '/resume', query: { year: '2021' } }}>
           <a
             className={`${styles['step__indicator-link']} ${
               isTabTwo && styles['step__indicator-link-selected']
@@ -147,7 +147,7 @@ const Tabs = ({ router }) => {
             2021
           </a>
         </Link>
-        <Link href={{ pathname: '/resume', query: { year: '2020' } }}>
+        <Link scroll={false}  href={{ pathname: '/resume', query: { year: '2020' } }}>
           <a
             className={`${styles['step__indicator-link']} ${
               isTabThree && styles['step__indicator-link-selected']
@@ -156,7 +156,7 @@ const Tabs = ({ router }) => {
             2020
           </a>
         </Link>
-        <Link href={{ pathname: '/resume', query: { year: '2019' } }}>
+        <Link scroll={false}  href={{ pathname: '/resume', query: { year: '2019' } }}>
           <a
             className={`${styles['step__indicator-link']} ${
               isTabFour && styles['step__indicator-link-selected']
