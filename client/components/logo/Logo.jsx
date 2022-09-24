@@ -7,7 +7,15 @@ export default function Logo() {
   return (
     <>
       <Link href='/'>
-        <Image className={styles['logo']} src='/LogoPortfolio.svg' alt='Logo' width={65} height={65} />
+        <a>
+          <Image
+            className={styles['logo']}
+            src='/LogoPortfolio.svg'
+            alt='Logo'
+            width={65}
+            height={65}
+          />
+        </a>
       </Link>
     </>
   );
