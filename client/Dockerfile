@@ -1,16 +1,3 @@
-# FROM node:16-alpine
-
-# RUN mkdir -p /usr/app/
-# WORKDIR /usr/app
-
-# COPY ./ ./
-
-# RUN yarn install
-# RUN yarn run build
-
-# EXPOSE 3000
-# CMD ["yarn", "start"]
-
 #Creates a layer from node:alpine image.
 FROM node:alpine
 
