@@ -47,7 +47,7 @@
 	padding: 10px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 	grid-gap: 25px;
 }
 
@@ -70,6 +70,7 @@
 
 .item4 {
 	grid-area: 4 / 3 / 4 / 5;
+	/* grid-area: 5 / 3 / 4 / 5; */
 }
 
 .item5 {
