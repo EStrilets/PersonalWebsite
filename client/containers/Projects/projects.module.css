@@ -30,7 +30,7 @@
 }
 
 .card__youtube-log:hover {
-	color: red;
+	color: rgb(255, 2, 2);
 	cursor: pointer;
 }
 
@@ -38,6 +38,22 @@
 .card__youtube-log:active {
 	transition: none;
 }
+
+.card__github-log {
+	margin-right: 2rem;
+	transition: color 0.8s;
+}
+
+.card__github-log:hover {
+	color: rgb(232, 93, 12);
+	cursor: pointer;
+}
+
+.card__github-log:focus,
+.card__github-log:active {
+	transition: none;
+}
+
 
 
 /* --------- Grid ---------- */
@@ -53,27 +69,31 @@
 
 .item1 {
 	grid-area: 1 / 1 / 1 / 3;
-	background: rgba(255, 217, 185, 0.7);
+	background: linear-gradient(90deg, hsla(177, 87%, 79%, 0.8) 0%, hsla(235, 89%, 70%, 0.75) 100%);
+
+
 }
 
 .item2 {
 	grid-area: 2 / 1 / 4 / 3;
-	background: rgba(209, 185, 255, 0.7);
+	background: linear-gradient(90deg, hsla(312, 77%, 86%, 0.8) 0%, hsla(220, 61%, 79%, 0.8) 100%);
 }
 
 .item3 {
 	grid-area: 1 / 3 / 4 / 5;
-	background: rgba(198, 244, 253, 0.7);
+	background: linear-gradient(90deg, hsla(139, 70%, 75%, 0.75) 0%, hsla(63, 90%, 76%, 0.8) 100%);
 	display: flex;
 	align-items: center;
 }
 
 .item4 {
 	grid-area: 4 / 3 / 4 / 5;
-	/* grid-area: 5 / 3 / 4 / 5; */
+	background: linear-gradient(90deg, hsla(173, 89%, 70%, 0.7) 0%, hsla(196, 68%, 38%, 0.7) 100%);
+
 }
 
 .item5 {
+	background: linear-gradient(90deg, rgba(255, 203, 168, 0.7) 0%, hsla(341, 91%, 68%, 0.7) 100%);
 	grid-area: 4 / 1 / 4 / 3;
 }
 
