@@ -5,12 +5,8 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-
     width: 50%;
-    right: 5rem;
-
     padding: 2rem;
-    margin-bottom: 1rem;
 }
 
 .intro__container-text { 
@@ -19,17 +15,28 @@
     color: var(--color-footer)
 }
 
-.intro__container-text h1{ 
-   font-size: var(--font-size-header);
-   font-weight: 650;
+.intro__container-text h1 {
+  font-size: var(--font-size-header);
+  font-weight: 650;
+  /* text-shadow: 1.8px 1.8px 0px rgba(0,0,0,0.2); */
+  text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0, 0, 0, .1),
+    0 0 5px rgba(0, 0, 0, .1),
+    0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .25),
+    0 10px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
 }
-
 .intro__container-text p{ 
     max-width: 68%;
     font-size: var(--font-size-subheader);
     font-weight: 400;
     position: relative;
-    left: 5%;
     top: -10px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
