@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './welcomepage.module.css'
-import Links from '../links/Links';
 
 export default function Introduction() {
   return (
@@ -10,7 +9,6 @@ export default function Introduction() {
           <p>Software developer</p>
       </div>
       <div>
-        {/* <Links /> */}
       </div>
     </div>
   );

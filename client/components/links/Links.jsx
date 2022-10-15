@@ -23,7 +23,7 @@ export default function Links() {
                       <FaRegLightbulb className={styles['tooltip-styles']} />
                     </a>
                   </Link>
-                  <Link href='/resume'>
+                  <Link href='/resume?year=2022'>
                     <a className={styles['slider-nav-item']}>
                       {/* <span className={styles['tooltip']}>Projects</span> */}
                       <HiOutlineDocumentDuplicate />
