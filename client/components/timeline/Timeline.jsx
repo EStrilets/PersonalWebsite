@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react"
 import Link from 'next/link'
 import { withRouter } from "next/router"
 import styles from './timeline.module.css';
-import { motion, AnimatePresence  } from "framer-motion";
+import {Achievements2022, Achievements2021, Achievements2020 } from './CardData/Achievements'
+import {Goals2022, Goals2021, Goals2020 } from './CardData/Goals'
+import {Knowledge2022, Knowledge2021, Knowledge2020 } from './CardData/Knowledge'
 import CardComponent from '../card/CardComponent'
 import Lottie2022 from "../lotties/Lottie2022";
 import Lottie2019 from "../lotties/Lottie2019";
 import Lottie2020 from "../lotties/Lottie2020";
 import Lottie2021 from "../lotties/Lottie2021";
 
+
 const data = [
-  {
+{
     id: "0"
   },
   {
@@ -21,15 +24,48 @@ const data = [
   }
 ];
 
-const info = [
+const info2022 = [
   {
-    name: "Jim"
+    name: "Achievements",
+    description: [<Achievements2022 />],
   },
   {
-    name: "Karen"
+    name: "Knowledge",
+    description: [<Knowledge2022 />],
   },
   {
-    name: "Yev"
+    name: "Goals",
+    description: [<Goals2022 />],
+  }
+];
+
+const info2021 = [
+  {
+    name: "Achievements",
+    description: [<Achievements2021 />],
+  },
+  {
+    name: "Knowledge",
+    description: [<Knowledge2021 />],
+  },
+  {
+    name: "Goals",
+    description: [<Goals2021 />],
+  }
+];
+
+const info2020 = [
+  {
+    name: "Achievements",
+    description: [<Achievements2020 />],
+  },
+  {
+    name: "Knowledge",
+    description: [<Knowledge2020 />],
+  },
+  {
+    name: "Goals",
+    description: [<Goals2020 />],
   }
 ];
 
@@ -38,22 +74,31 @@ const TabsContent = ({ children, year, active }) => {
     <>
       <div className={styles['course-preview']}>{children}</div>
       <div className={styles['course-info']}>
-        <h3>Achievements </h3>
         {year === '2022' ? (
           <>
-            {active === 0 && <List activeTab={0} info={info[0]} />}
-            {active === 1 && <List activeTab={1} />}
-            {active === 2 && <List activeTab={2} />}
+            {active === 0 && <List activeTab={0} info={info2022[0]} />}
+            {active === 1 && <List activeTab={1} info={info2022[1]} />}
+            {active === 2 && <List activeTab={2} info={info2022[2]} />}
           </>
         ) : year === '2021' ? (
           <>
-            {active === 0 && <List activeTab={0} info={info[1]} />}
-            {active === 1 && <List activeTab={1} />}
-            {active === 2 && <List activeTab={2} />}
+            {active === 0 && <List activeTab={0} info={info2021[0]} />}
+            {active === 1 && <List activeTab={1} info={info2021[1]} />}
+            {active === 2 && <List activeTab={2} info={info2021[2]} />}
           </>
-        ) : (
-          ''
-        )}
+        ) : year === '2020' ? (
+          <>
+          {active === 0 && <List activeTab={0} info={info2020[0]} />}
+          {active === 1 && <List activeTab={1} info={info2020[1]} />}
+          {active === 2 && <List activeTab={2} info={info2020[2]} />}
+        </>
+        ) : year === '2019' ? (
+          <>
+          {active === 0 && <List activeTab={0} info={info2021[0]} />}
+          {active === 1 && <List activeTab={1} info={info2021[1]} />}
+          {active === 2 && <List activeTab={2} info={info2021[2]} />}
+        </>
+        ) : (<></>)}
       </div>
     </>
   );
@@ -62,102 +107,16 @@ const TabsContent = ({ children, year, active }) => {
 const List = ({ activeTab, info }) => {
   return (
     <>
-      {/* {activeTab === 1 && (
-        <ul className={styles['achievements__text']}>
-          <li className={styles['achievements__text']}>
-            Participated in{' '}
-            <a
-              href='https://vanstartupweek.ca/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Vancouver Start-up week
-            </a>{' '}
-            as volunteer
-          </li>
-          <li>
-            Developed Anomaly Detection in Electricity Consumption Data project
-            for Exploratory Analysis in Electricity Consumption data on US power
-            grids
-          </li>
-          <li>
-            Participated in{' '}
-            <a
-              href='https://vanstartupweek.ca/'
-              target='_blank'
-              rel='noreferrer'
-            ></a>
-          </li>
-        </ul>
-      )} */}
-       {activeTab === 0 ? (
-        <h1>{info.name}</h1>
-      ) : activeTab === 1 ? (<h1>Hello world check 2</h1>) : activeTab === 2  ? (<h1>Hello world check 3</h1>) : ''}
-    </>
-  );
-};
-
-const list2020 = () => {
-  return (
-    <>
-      <ul className={styles['achievements__text']}>
-        <li className={styles['achievements__text']}>
-          Gather a team of 4 developer for developing the production ready application
-        </li>
-        <li>
-          
-        </li>
-        <li>
-          Participated in{' '}
-          <a href='https://vanstartupweek.ca/' target='_blank' rel="noreferrer">
-            
-          </a>
-        </li>
-      </ul>
-    </>
-  );
-};
-
-const list2021 = () => {
-  return (
-    <>
-      <ul className={styles['achievements__text']}>
-        <li className={styles['achievements__text']}>
-          Learned JavaScript, React, Redux and understood the microservice
-          architecture patterns
-        </li>
-        <li>
-          Developed and maintained microservices in the Unifyi project and
-          took responsibility for business and design parts of the project
-        </li>
-        <li>
-         Joined a Teradici company for my co-op as a frontend developer
-        </li>
-      </ul>
-    </>
-  );
-};
-
-const list2022 = () => {
-  return (
-    <>
-      <ul className={styles['achievements__text']}>
-        <li className={styles['achievements__text']}>
-          Successfully launched {' '}
-          <a href='https://vanstartupweek.ca/' target='_blank' rel="noreferrer">
-            Unifyi Project,
-          </a>{' '}
-          website received 900+ visits in 2 months
-        </li>
-        <li>
-          Graduated from Simon Fraser University with Computing Science degree
-        </li>
-        <li>
-          Started to develop NFT project that allows the collector to swap the
-          properties of regular NFT
-        </li>
-      </ul>
-      <button className={styles['card__button']}>Download resume</button>
+      {Number.isInteger(activeTab) ? (
+        <>
+          <h3>{info.name}</h3>
+          {info.description.map((item, key) => (
+            <span key={key}>{item}</span>
+          ))}
+        </>
+      ) : (
+        <> </>
+      )}
     </>
   );
 };
@@ -237,41 +196,39 @@ const Tabs = ({ router }) => {
       >
         {isTabOne && (
           <React.Fragment>
-            <TabsContent list={info[0]} year={year} active={active}>
+            <TabsContent year={year} active={active}>
               <Lottie2022 />
             </TabsContent>
           </React.Fragment>
         )}
         {isTabTwo && (
           <React.Fragment>
-            <TabsContent list={info[1]} year={year} active={active}>
+            <TabsContent year={year} active={active}>
               <Lottie2021 />
             </TabsContent>
           </React.Fragment>
         )}
         {isTabThree && (
           <React.Fragment>
-            <TabsContent list={list2020()}>
+            <TabsContent year={year} active={active}>
               <Lottie2020 />
             </TabsContent>
           </React.Fragment>
         )}
         {isTabFour && (
           <React.Fragment>
-            <TabsContent>
+            <TabsContent year={year} active={active}>
               <Lottie2019 />
             </TabsContent>
           </React.Fragment>
         )}
       </CardComponent>
       <div className={styles['btns-wrapper']}>
-        {data.map((item, i) => (
-          <span key={i}>
+        {data.map((item, key) => (
+          <span key={key}>
             <div
-              // whileTap={{ scale: 1.2 }}
-              className={active===i ? `${styles['course-info-btn']} ${styles['course-info-btn__active']}` : styles['course-info-btn'] }
-              // className={`${styles['course-info-btn']}`}
-              onClick={() => setActive(i)}
+              className={active===key ? `${styles['course-info-btn']} ${styles['course-info-btn__active']}` : styles['course-info-btn'] }
+              onClick={() => setActive(key)}
             />
           </span>
         ))}

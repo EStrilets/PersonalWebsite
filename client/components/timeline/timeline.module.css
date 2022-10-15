@@ -48,20 +48,19 @@
       max-width: 800px;
       min-width: 300px;
       cursor: grab;
-      background-color: rgba(136, 252, 210, 0.3);
+      background: linear-gradient(90deg, hsla(173, 89%, 70%, 0.7) 0%, hsla(196, 68%, 38%, 0.7) 100%);
   }
  
   .year__2019 { 
-    background-color: rgba(254, 193, 221, 0.7);
+    background: linear-gradient(90deg, hsla(312, 77%, 86%, 0.8) 0%, hsla(220, 61%, 79%, 0.8) 100%);
   }
   
   .year__2020 { 
-    background-color: rgba(225, 254, 247, 0.7); 
+    background: linear-gradient(30deg, hsla(139, 70%, 75%, 0.75) 0%, hsla(63, 90%, 76%, 0.8) 100%);
   }
 
   .year__2021 { 
-    background-color: rgba(255, 252, 224, 0.7);
-    ;
+    background: linear-gradient(90deg, rgba(255, 203, 168, 0.7) 0%, hsla(341, 91%, 68%, 0.7) 100%);
   }
 
   .course-preview {

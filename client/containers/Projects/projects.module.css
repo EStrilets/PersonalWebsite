@@ -54,6 +54,11 @@
 	transition: none;
 }
 
+.card-icon { 
+	margin-left: 1.5rem;
+	margin-right: 1.5rem
+}
+
 
 
 /* --------- Grid ---------- */
@@ -108,7 +113,7 @@
 .tech-stack {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 }
 
 /* --------- Responsive ---------- */
