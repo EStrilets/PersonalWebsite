@@ -3,6 +3,7 @@ import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { FaRegLightbulb } from "react-icons/fa";
 import Link from 'next/link';
 import { HiOutlineDocumentDuplicate } from "react-icons/hi";
+import Tooltip from '../tooltip/Tooltip';
 
 export default function Links() {
   return (
@@ -20,13 +21,16 @@ export default function Links() {
                 >
                   <Link href='/project'>
                     <a className={styles['slider-nav-item']}>
-                      <FaRegLightbulb className={styles['tooltip-styles']} />
+                      <Tooltip content='Projects' direction='bottom'>
+                        <FaRegLightbulb className={styles['tooltip-styles']} />
+                      </Tooltip>
                     </a>
                   </Link>
                   <Link href='/resume?year=2022'>
                     <a className={styles['slider-nav-item']}>
-                      {/* <span className={styles['tooltip']}>Projects</span> */}
-                      <HiOutlineDocumentDuplicate />
+                      <Tooltip content='Personal Info' direction='bottom'>
+                        <HiOutlineDocumentDuplicate />
+                      </Tooltip>
                     </a>
                   </Link>
                   <a
@@ -35,7 +39,9 @@ export default function Links() {
                     rel='noreferrer'
                     className={styles['slider-nav-item']}
                   >
-                    <BsGithub />
+                    <Tooltip content='Github' direction='bottom'>
+                      <BsGithub />
+                    </Tooltip>
                   </a>
                   <a
                     href='https://www.linkedin.com/in/eugene-strilets/'
@@ -43,7 +49,9 @@ export default function Links() {
                     rel='noreferrer'
                     className={styles['slider-nav-item']}
                   >
-                    <BsLinkedin />
+                    <Tooltip content='LinkedIn' direction='bottom'>
+                      <BsLinkedin />
+                    </Tooltip>
                   </a>
                 </div>
               </div>

@@ -11,21 +11,21 @@ export default function ContactForm() {
 
   //  const {name, email, message} = values
 
-    async function handleOnSubmit(e) {
-      e.preventDefault();
+    // async function handleOnSubmit(e) {
+    //   e.preventDefault();
 
-      const formData = {};
+    //   const formData = {};
 
-      Array.from(e.currentTarget.elements).forEach((field) => {
-        if (!field.name) return;
-        formData[field.name] = field.value;
-      });
+    //   Array.from(e.currentTarget.elements).forEach((field) => {
+    //     if (!field.name) return;
+    //     formData[field.name] = field.value;
+    //   });
 
-      await fetch('/api/mail', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-      });
-    }
+    //   await fetch('/api/mail', {
+    //     method: 'POST',
+    //     body: JSON.stringify(formData),
+    //   });
+    // }
 
     // const handleOnSubmit = async e => { 
     //   e.preventDefault();
@@ -49,7 +49,7 @@ export default function ContactForm() {
 
   return (
     <div className={styles['form__container']}>
-      <form method='post' onSubmit={handleOnSubmit} className={styles['form__wrapper']}>
+      <form method='post' className={styles['form__wrapper']}>
         <input
           type='text'
           className={styles['form__input']}

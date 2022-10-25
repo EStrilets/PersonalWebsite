@@ -98,7 +98,7 @@ const TabsContent = ({ children, year, active }) => {
           {active === 1 && <List activeTab={1} info={info2021[1]} />}
           {active === 2 && <List activeTab={2} info={info2021[2]} />}
         </>
-        ) : (<></>)}
+        ) : null}
       </div>
     </>
   );
@@ -114,9 +114,7 @@ const List = ({ activeTab, info }) => {
             <span key={key}>{item}</span>
           ))}
         </>
-      ) : (
-        <> </>
-      )}
+      ) : null}
     </>
   );
 };
