@@ -147,15 +147,25 @@ export default function Projects() {
           </div>
           <p className={styles['card__text-p']}>{item.description}</p>
           <div className={styles['container__tech-stack']}>
-            {item.frontEndTitle ? <h3>Frontend stack</h3> : <h3>Tech stack</h3>}
-            <div className={styles['tech-stack']}>
-              {item.frontEndIcons.map((icons) => icons)}
+            <div className={styles['container__tech-stack']}>
+              {item.frontEndTitle ? (
+                <h3>Frontend stack</h3>
+              ) : (
+                <h3>Tech stack</h3>
+              )}
+              <div className={styles['tech-stack']}>
+                {item.frontEndIcons.map((icons, key) => (
+                  <span key={key}>{icons}</span>
+                ))}
+              </div>
             </div>
             {item.backEndIcons.length > 0 && (
               <div className={styles['container__tech-stack']}>
                 <h3>Backend stack</h3>
                 <div className={styles['tech-stack']}>
-                  {item.backEndIcons.map((icons) => icons)}
+                  {item.backEndIcons.map((icons, key) => (
+                    <span key={key}>{icons}</span>
+                  ))}
                 </div>
               </div>
             )}
@@ -163,7 +173,9 @@ export default function Projects() {
               <div className={styles['container__tech-stack']}>
                 <h3>DevOps stack</h3>
                 <div className={styles['tech-stack']}>
-                  {item.devOpsIcons.map((icons) => icons)}
+                  {item.devOpsIcons.map((icons, key) => (
+                    <span key={key}>{icons}</span>
+                  ))}
                 </div>
               </div>
             )}

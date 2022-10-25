@@ -223,3 +223,9 @@
               transform: translateY(0vh) translateX(110vw) scale(0.45);
     }
   }
+
+  @media screen and (max-width: 700px) { 
+     .bird-container { 
+        display: none;
+     }
+  }
