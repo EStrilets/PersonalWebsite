@@ -74,9 +74,9 @@ export default function ContactForm() {
           name='message'
           // value={message}
         ></textarea>
-      <button className={styles['form__button-submit']}>Contact!</button>
+      {/* <button className={styles['form__button-submit']}>Contact!</button> */}
       </form>
-        {/* <ContactFormBtn /> */}
+        <ContactFormBtn />
     </div>
   );
 }

@@ -17,6 +17,7 @@
 
 .intro__container-text h1 {
   font-size: var(--font-size-header);
+  font-family: var(--font-family);
   font-weight: 650;
   text-shadow: 0 1px 0 #9edfdc,
     0 2px 0 #a4d5d3,
@@ -33,6 +34,7 @@
 }
 .intro__container-text p{ 
     max-width: 68%;
+    font-family: var(--font-family);
     font-size: var(--font-size-subheader);
     font-weight: 400;
     position: relative;
@@ -58,3 +60,13 @@
     from, to { border-color: transparent }
     50% { border-color: rgba(3, 27, 52, 0.6) }
   }
+
+  @media screen and (max-width: 700px) { 
+    .intro__container-text h1{ 
+      font-size: 2rem;
+      text-align:center;
+  }
+  .intro__container-text p{ 
+    max-width: 100%;
+  }
+ }
