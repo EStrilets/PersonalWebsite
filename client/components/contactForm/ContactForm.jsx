@@ -116,7 +116,7 @@ export default function ContactForm() {
         ></textarea>
         <button className={styles['form__button-submit']}>{buttonText}</button>
         {/* <ContactFormBtn /> */}
-        <div className='text-left'>
+        {/* <div className='text-left'>
           {showSuccessMessage && (
             <p className='text-green-500 font-semibold text-sm my-2'>
               Thankyou! Your Message has been delivered.
@@ -127,7 +127,7 @@ export default function ContactForm() {
               Oops! Something went wrong, please try again.
             </p>
           )}
-        </div>
+        </div> */}
       </form>
     </div>
   );
