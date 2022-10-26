@@ -19,11 +19,11 @@
   font-size: var(--font-size-header);
   font-family: var(--font-family);
   font-weight: 650;
-  text-shadow: 0 1px 0 #9edfdc,
-    0 2px 0 #a4d5d3,
-    0 3px 0 #9dc3c1,
-    0 4px 0 #9dc3c1,
-    0 5px 0 #7a9a98,
+  text-shadow: 0 1px 0 rgba(198, 253, 183, 0.6),
+    0 2px 0 rgba(198, 253, 183, 0.6),
+    0 3px 0 rgba(185, 252, 182, 0.6),
+    0 4px 0 rgba(185, 252, 182, 0.6),
+    0 5px 0 rgba(182, 252, 191, 0.6),
     0 6px 1px rgba(0, 0, 0, .1),
     0 0 5px rgba(0, 0, 0, .1),
     0 1px 3px rgba(0, 0, 0, .3),

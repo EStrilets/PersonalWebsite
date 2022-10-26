@@ -39,13 +39,32 @@
     opacity: 0.7
 }
 
-.form__input:last-child { 
-    height: 14rem;
+.form__input-message { 
+    height: 10rem;
     border-radius: 1.5em;
     display: flex;
     align-items: flex-end;
     padding-top: 1.5rem;
     resize: none;
+    margin: 1rem;
+    background: transparent;
+    border:none;
+    outline:none;
+    border-radius: 1.2em;
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    transition: all 500ms ease-in-out;
+    box-shadow: 0px 0px 0px white inset, 4px 4px 8px #9ec191, -4px -4px 8px #ccecbb;
+}
+
+.form__input-message:focus { 
+    box-shadow: inset 2px 2px 10px #6f8467, 0px 0px 0px white; 
+}
+
+
+.form__input-message::placeholder { 
+    color: var(--color-footer);
+    opacity: 0.7
 }
 
 .form__button-submit { 
