@@ -41,7 +41,7 @@
    .spinner span:nth-child(7) {
     animation-delay: 1.5s;
    }
-   
+/*    
    @keyframes loading6454 {
     0%, 100% {
      transform: translateY(0);
@@ -50,4 +50,4 @@
     50% {
      transform: translateY(-10px);
     }
-   }
+   } */
