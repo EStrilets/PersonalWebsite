@@ -78,7 +78,7 @@ export default function ContactForm() {
     <div className={styles['form__container']}>
       <form
         method='post'
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
         className={styles['form__wrapper']}
       >
         <input
