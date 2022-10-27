@@ -71,14 +71,13 @@ export default function ContactForm() {
       setShowFailureMessage(false);
       setButtonText("Send");
     }
-    console.log(fullname, email, message);
   };
 
   return (
     <div className={styles['form__container']}>
       <form
         method='post'
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
         className={styles['form__wrapper']}
       >
         <input
@@ -116,7 +115,7 @@ export default function ContactForm() {
         ></textarea>
         <button className={styles['form__button-submit']}>{buttonText}</button>
         {/* <ContactFormBtn /> */}
-        {/* <div className='text-left'>
+        <div className='text-left'>
           {showSuccessMessage && (
             <p className='text-green-500 font-semibold text-sm my-2'>
               Thankyou! Your Message has been delivered.
@@ -127,7 +126,7 @@ export default function ContactForm() {
               Oops! Something went wrong, please try again.
             </p>
           )}
-        </div> */}
+        </div>
       </form>
     </div>
   );
