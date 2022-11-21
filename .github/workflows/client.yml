@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                node-version: [12.x]
+                node-version: [18.x]
 
         steps:
             - name: Git checkout
@@ -35,7 +35,7 @@ jobs:
         needs: Test
         strategy:
             matrix:
-                node-version: [12.x]
+                node-version: [18.x]
 
         steps:
             - name: Git checkout
