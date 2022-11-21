@@ -7,7 +7,7 @@ export default function Logo() {
   return (
     <>
       <Link href='/'>
-        <a>
+        <a data-testid='logo'>
           <Image
             className={styles['logo']}
             src='/LogoPortfolio.svg'

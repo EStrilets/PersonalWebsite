@@ -86,6 +86,7 @@ export default function ContactForm() {
           placeholder='Name*'
           name='name'
           required
+          data-testid='username-input'
           value={fullname}
           onChange={(e) => {
             setFullname(e.target.value);
@@ -95,6 +96,7 @@ export default function ContactForm() {
           type='email'
           value={email}
           required
+          data-testid='email-input'
           className={styles['form__input']}
           placeholder='Email*'
           name='email'
@@ -106,6 +108,7 @@ export default function ContactForm() {
           className={styles['form__input-message']}
           value={message}
           required
+          data-testid='msg-input'
           placeholder='Message*'
           maxLength='1000'
           name='message'

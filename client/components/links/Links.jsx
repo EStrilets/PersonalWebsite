@@ -20,14 +20,14 @@ export default function Links() {
                   className={`${styles['social-icons']} ${styles['mb-3']} ${styles['iconpad']}`}
                 >
                   <Link href='/project'>
-                    <a className={styles['slider-nav-item']}>
+                    <a className={styles['slider-nav-item']} data-testid='projects-page'>
                       <Tooltip content='Projects' direction='bottom'>
                         <FaRegLightbulb className={styles['tooltip-styles']} />
                       </Tooltip>
                     </a>
                   </Link>
                   <Link href='/resume?year=2022'>
-                    <a className={styles['slider-nav-item']}>
+                    <a className={styles['slider-nav-item']} data-testid='resume-page'>
                       <Tooltip content='Personal Info' direction='bottom'>
                         <HiOutlineDocumentDuplicate />
                       </Tooltip>
@@ -38,6 +38,7 @@ export default function Links() {
                     target='_blank'
                     rel='noreferrer'
                     className={styles['slider-nav-item']}
+                    data-testid='github-page'
                   >
                     <Tooltip content='Github' direction='bottom'>
                       <BsGithub />
@@ -48,6 +49,7 @@ export default function Links() {
                     target='_blank'
                     rel='noreferrer'
                     className={styles['slider-nav-item']}
+                    data-testid='linkedin-page'
                   >
                     <Tooltip content='LinkedIn' direction='bottom'>
                       <BsLinkedin />

@@ -6,7 +6,7 @@ export default function ContactBtn() {
     return (
       <>
         <Link href='/contact'>
-          <div className={styles['spinner']}>
+          <div className={styles['spinner']} data-testid='contact-btn'>
             <span>C</span>
             <span>O</span>
             <span>N</span>
