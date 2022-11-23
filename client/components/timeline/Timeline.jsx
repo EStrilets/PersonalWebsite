@@ -185,47 +185,53 @@ const Tabs = ({ router }) => {
           </a>
         </Link>
       </div>
-      <CardComponent
-        newStyles={`${styles['card__section']} ${
-          isTabThree && styles['year__2020']
-        } ${isTabTwo && styles['year__2021']} ${
-          isTabFour && styles['year__2019']
-        }`}
-      >
-        {isTabOne && (
-          <React.Fragment>
-            <TabsContent year={year} active={active}>
-              <Lottie2022 />
-            </TabsContent>
-          </React.Fragment>
-        )}
-        {isTabTwo && (
-          <React.Fragment>
-            <TabsContent year={year} active={active}>
-              <Lottie2021 />
-            </TabsContent>
-          </React.Fragment>
-        )}
-        {isTabThree && (
-          <React.Fragment>
-            <TabsContent year={year} active={active}>
-              <Lottie2020 />
-            </TabsContent>
-          </React.Fragment>
-        )}
-        {isTabFour && (
-          <React.Fragment>
-            <TabsContent year={year} active={active}>
-              <Lottie2019 />
-            </TabsContent>
-          </React.Fragment>
-        )}
-      </CardComponent>
+      <div className={styles['card-wrapper']}>
+        <CardComponent
+          newStyles={`${styles['card__section']} ${
+            isTabThree && styles['year__2020']
+          } ${isTabTwo && styles['year__2021']} ${
+            isTabFour && styles['year__2019']
+          }`}
+        >
+          {isTabOne && (
+            <React.Fragment>
+              <TabsContent year={year} active={active}>
+                <Lottie2022 />
+              </TabsContent>
+            </React.Fragment>
+          )}
+          {isTabTwo && (
+            <React.Fragment>
+              <TabsContent year={year} active={active}>
+                <Lottie2021 />
+              </TabsContent>
+            </React.Fragment>
+          )}
+          {isTabThree && (
+            <React.Fragment>
+              <TabsContent year={year} active={active}>
+                <Lottie2020 />
+              </TabsContent>
+            </React.Fragment>
+          )}
+          {isTabFour && (
+            <React.Fragment>
+              <TabsContent year={year} active={active}>
+                <Lottie2019 />
+              </TabsContent>
+            </React.Fragment>
+          )}
+        </CardComponent>
+      </div>
       <div className={styles['btns-wrapper']}>
         {data.map((item, key) => (
           <span key={key}>
             <div
-              className={active===key ? `${styles['course-info-btn']} ${styles['course-info-btn__active']}` : styles['course-info-btn'] }
+              className={
+                active === key
+                  ? `${styles['course-info-btn']} ${styles['course-info-btn__active']}`
+                  : styles['course-info-btn']
+              }
               onClick={() => setActive(key)}
             />
           </span>
