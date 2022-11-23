@@ -1,5 +1,7 @@
 .container {
     min-height: 33em;
+    display: flex;
+    justify-content: center;
   } 
   
 .wrapper {

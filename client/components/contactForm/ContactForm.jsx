@@ -72,7 +72,7 @@ export default function ContactForm() {
       }
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
-      setButtonText("Send!");
+      setButtonText("Sent!");
       setFullname("")
       setEmail("")
       setMessage("")
@@ -122,8 +122,8 @@ export default function ContactForm() {
             setMessage(e.target.value);
           }}
         ></textarea>
-        <button className={styles['form__button-submit']}>{buttonText}</button>
-        {/* <ContactFormBtn /> */}
+        {/* <button className={styles['form__button-submit']}>{buttonText}</button> */}
+        <ContactFormBtn onSumbit={handleSubmit} buttonText={buttonText} />
       </form>
       <div className={styles['notification-container']}>
         {showSuccessMessage && (
