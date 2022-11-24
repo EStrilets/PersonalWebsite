@@ -39,3 +39,10 @@
 .next-icon { 
     color: black
 }
+
+.github-text { 
+    margin-left: 0.2rem;
+    color:rgb(0, 78, 22);
+    text-decoration: underline;
+
+}
