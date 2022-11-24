@@ -1,10 +1,7 @@
 import '../styles/globals.css'
-import Navbar from '../components/nav/Navbar'
-import Fab from '../components/fab/Fab'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
-/* Tell Font Awesome to skip adding the CSS automatically since it's being imported above */
-
+import Layout from '../components/layout/Layout'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -24,9 +21,9 @@ function MyApp({ Component, pageProps }) {
         },
       }}
     >
-      <Navbar />
-      <Component {...pageProps} />
-      <Fab />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </motion.div>
   );
 }

@@ -1,24 +1,24 @@
-import React from 'react'
-import styles from './footer.module.css';
+import styles from './footer.module.css'
+import { SiNextdotjs } from 'react-icons/si';
+import { BsSuitHeartFill } from 'react-icons/bs';
 
 export default function Footer() {
   return (
-    <div className={styles['container']}>
-      <div className={`${styles['bird-container']} ${styles['bird-container--one']}`}>
-        <div className={`${styles['bird']} ${styles['bird--one']}`}></div>
+    <div className={styles['footer_container']}>
+      <div>
+        <p className={styles['first_header']}>
+          Powered by
+          <a>
+            <SiNextdotjs className={`${styles['icons']} ${styles['next-icon']}`} />
+          </a>
+          | Source on Github
+        </p>
+        <p className={styles['second_header']}>
+          Made with 
+            <BsSuitHeartFill className={`${styles['icons']} ${styles['heart-icon']}`} />
+          | Yev Strilets
+        </p>
       </div>
-
-      <div className={`${styles['bird-container']} ${styles['bird-container--two']}`}>
-        <div className={`${styles['bird']} ${styles['bird--two']}`}></div>
-      </div>
-
-      <div className={`${styles['bird-container']} ${styles['bird-container--three']}`}>
-        <div className={`${styles['bird']} ${styles['bird--three']}`}></div>
-      </div>
-
-      {/* <div className={`${styles['bird-container']} ${styles['bird-container--four']}`}>
-        <div className={`${styles['bird']} ${styles['bird--four']}`}></div>
-      </div> */}
     </div>
   );
 }
