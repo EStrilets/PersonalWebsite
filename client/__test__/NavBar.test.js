@@ -30,3 +30,5 @@ describe('Navbar', () => {
     expect(singletonRouter).toMatchObject({ asPath: '/contact' });
   });
 });
+
+//TODO bad test, rewrite
