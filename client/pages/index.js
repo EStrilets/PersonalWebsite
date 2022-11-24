@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Introduction from '../components/intro/Intoduction'
 import Links from '../components/links/Links'
+import BirdsAnimation from '../components/birdsAnimation/BirdsAnimation';
 import Footer from '../components/footer/Footer';
 
 export default function Home() {
@@ -16,9 +17,10 @@ export default function Home() {
         <Introduction />
         <Links />
       </div>
-      <div className={styles.container}>
-        <Footer />
-      </div>
+      {/* <div className={styles.container}>
+        <BirdsAnimation />
+      </div> */}
+      {/* <Footer /> */}
     </div>
   )
 }
