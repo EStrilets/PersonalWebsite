@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 6rem;
+    position: relative;
 }
 
 .gpt3__navbar-links {
@@ -96,9 +97,8 @@
 
 
 .gpt3__navbar-menu {
-    margin-left: 1rem;
 
-    display: none;
+    /* display: none; */
     position: relative;
 }
 
@@ -132,36 +132,65 @@
     display: none;
 }
 
-@media screen and (max-width: 1050px) {
-    .gpt3__navbar-links_container {
-        display: none;
-    }
 
-    .gpt3__navbar-menu {
-        display: flex;
-    }
+.icons { 
+    color: var(--color-footer)
 }
 
-@media screen and (max-width: 700px) {
-    .gpt3__navbar {
-        padding: 2rem 4rem;
-    }
+.menu {
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+    z-index: 1;
+    /* background: var(--color-footer); */
+    background: rgba(8, 33, 1, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
-@media screen and (max-width: 550px) {
-    .gpt3__navbar {
-        padding: 2rem;
-    }
+.link-list { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 520;
+    color: rgb(233, 252, 230);
+}
 
-    .gpt3__navbar-sign {
-        display: none;
-    }
+.link-list p:hover { 
+    color: rgb(253, 255, 253);
+    text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255,1);
+}
 
-    .gpt3__navbar-menu_container {
-        top: 20px;
-    }
+.menu-wrapper { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
-    .gpt3__navbar-menu_container-links-sign {
-        display: block;
-    }
+.menu-navbar { 
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.icon-close { 
+    color: rgb(233, 252, 230);
+    flex-grow: 1;
+    margin-left: 15rem;
+    transition: transform .2s;
+}
+
+.icon-close:hover { 
+    transform: scale(1.4);
+    color: rgba(255,255,255,1);
 }

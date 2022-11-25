@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/Project.module.css'
 import Projects from '../containers/Projects/Projects'
+import Navbar from '../components/nav/Navbar';
 
 export default function Project() {
   return (
@@ -10,4 +11,15 @@ export default function Project() {
       </div>
     </div>
   );
+}
+
+Project.getLayout = function PageLayout(page) { 
+  return ( 
+    <>
+     <Navbar burgerMenu={true} />
+     <>
+     {page}
+     </>
+    </>
+  )
 }
