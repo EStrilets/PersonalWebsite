@@ -146,9 +146,10 @@
     width: 100%;
     overflow:hidden;
     z-index: 1;
-    background: var(--color-footer);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
+    /* background: var(--color-footer); */
+    background: rgba(8, 33, 1, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .link-list { 
@@ -159,6 +160,11 @@
     font-size: 1.3rem;
     font-weight: 520;
     color: rgb(233, 252, 230);
+}
+
+.link-list p:hover { 
+    color: rgb(253, 255, 253);
+    text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255,1);
 }
 
 .menu-wrapper { 
@@ -186,4 +192,5 @@
 
 .icon-close:hover { 
     transform: scale(1.4);
+    color: rgba(255,255,255,1);
 }
