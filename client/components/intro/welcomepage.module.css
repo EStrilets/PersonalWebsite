@@ -12,28 +12,16 @@
 .intro__container-text { 
     margin: 0;
     display: block;
-    color: var(--color-footer)
+    color: var(--color-main)
 }
 
 .intro__container-text h1 {
   font-size: var(--font-size-header);
   font-family: var(--font-family);
-  font-weight: 650;
-  text-shadow: 0 1px 0 rgba(198, 253, 183, 0.6),
-    0 2px 0 rgba(198, 253, 183, 0.6),
-    0 3px 0 rgba(185, 252, 182, 0.6),
-    0 4px 0 rgba(185, 252, 182, 0.6),
-    0 5px 0 rgba(182, 252, 191, 0.6),
-    0 6px 1px rgba(0, 0, 0, .1),
-    0 0 5px rgba(0, 0, 0, .1),
-    0 1px 3px rgba(0, 0, 0, .3),
-    0 3px 5px rgba(0, 0, 0, .2),
-    0 5px 10px rgba(0, 0, 0, .25),
-    0 10px 10px rgba(0, 0, 0, .2),
-    0 20px 20px rgba(0, 0, 0, .15);
+  font-weight: 550;
 }
 .intro__container-text p{ 
-    max-width: 68%;
+    max-width: 60%;
     font-family: var(--font-family);
     font-size: var(--font-size-subheader);
     font-weight: 400;
@@ -48,6 +36,33 @@
     typing 3.5s steps(40, end),
     blink-caret .85s step-end infinite;
     
+}
+
+.main-header { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.wave {
+  animation-name: wave-animation; 
+  margin-left: 0.3rem;
+  text-shadow: none; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: 3;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(16.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-6.0deg) }
+   30% { transform: rotate(16.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
 }
 
 @keyframes typing {

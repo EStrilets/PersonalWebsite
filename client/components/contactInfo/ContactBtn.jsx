@@ -1,19 +1,17 @@
 import React from 'react'
 import styles from './button.module.css'
 import Link from 'next/link'
+import { FiMail } from 'react-icons/fi'
+import Tooltip from '../tooltip/Tooltip'
 
 export default function ContactBtn() {
     return (
       <>
         <Link href='/contact'>
           <div className={styles['spinner']} data-testid='contact-btn'>
-            <span>C</span>
-            <span>O</span>
-            <span>N</span>
-            <span>T</span>
-            <span>A</span>
-            <span>C</span>
-            <span>T</span>
+            <Tooltip content='Contact' direction='bottom'>
+              <FiMail size={30} />
+            </Tooltip>
           </div>
         </Link>
       </>

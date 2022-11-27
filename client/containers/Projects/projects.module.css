@@ -5,8 +5,9 @@
 	display: flex;
 	flex-direction: column;
 	cursor: grab;
-	color: var(--color-footer);
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(228, 227, 227);
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .card__header-container {
@@ -17,6 +18,13 @@
 	height: 60px;
 	width: 100%;
 	font-family: var(--font-family);
+	background-color: #fff;
+	background: linear-gradient(to right, #642b73, #c6426e);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }
 
 .card__text-p {
@@ -74,31 +82,23 @@
 
 .item1 {
 	grid-area: 1 / 1 / 1 / 3;
-	background: linear-gradient(90deg, hsla(177, 87%, 79%, 0.8) 0%, hsla(235, 89%, 70%, 0.75) 100%);
-
-
 }
 
 .item2 {
 	grid-area: 2 / 1 / 4 / 3;
-	background: linear-gradient(90deg, hsla(312, 77%, 86%, 0.8) 0%, hsla(220, 61%, 79%, 0.8) 100%);
 }
 
 .item3 {
 	grid-area: 1 / 3 / 4 / 5;
-	background: linear-gradient(90deg, hsla(139, 70%, 75%, 0.75) 0%, hsla(63, 90%, 76%, 0.8) 100%);
 	display: flex;
 	align-items: center;
 }
 
 .item4 {
 	grid-area: 4 / 3 / 4 / 5;
-	background: linear-gradient(90deg, hsla(173, 89%, 70%, 0.7) 0%, hsla(196, 68%, 38%, 0.7) 100%);
-
 }
 
 .item5 {
-	background: linear-gradient(90deg, rgba(255, 203, 168, 0.7) 0%, hsla(341, 91%, 68%, 0.7) 100%);
 	grid-area: 4 / 1 / 4 / 3;
 }
 

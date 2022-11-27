@@ -12,14 +12,3 @@ export default function ResumeList() {
     </div>
   );
 }
-
-ResumeList.getLayout = function PageLayout(page) { 
-  return ( 
-    <>
-     <Navbar burgerMenu={true} />
-     <>
-     {page}
-     </>
-    </>
-  )
-}

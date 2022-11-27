@@ -22,7 +22,7 @@
     border:none;
     outline:none;
     border-radius: 1.2em;
-    color: var(--color-footer);
+    color: var(--color-main);
     font-size: 1.5rem;
     padding-left: 1.5rem;
     transition: all 500ms ease-in-out;
@@ -35,7 +35,7 @@
 
 
 .form__input::placeholder { 
-    color: var(--color-footer);
+    color: var(--color-main);
     opacity: 0.7
 }
 
@@ -63,7 +63,7 @@
 
 
 .form__input-message::placeholder { 
-    color: var(--color-footer);
+    color: var(--color-main);
     opacity: 0.7
 }
 
@@ -84,5 +84,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-footer);
+    color: var(--color-main);
 }

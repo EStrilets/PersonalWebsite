@@ -14,14 +14,3 @@ export default function Contact() {
     </div>
   );
 }
-
-Contact.getLayout = function PageLayout(page) { 
-  return ( 
-    <>
-     <Navbar burgerMenu={true} />
-     <>
-     {page}
-     </>
-    </>
-  )
-}

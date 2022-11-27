@@ -7,29 +7,6 @@ import Fab from '../components/fab/Fab'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  if (Component.getLayout) {
-    return Component.getLayout(
-      <motion.div
-        key={router.route}
-        initial='pageInitial'
-        animate='pageAnimate'
-        exit='pageExit'
-        transition={{ duration: 0.4 }}
-        variants={{
-          pageInitial: {
-            opacity: 0,
-          },
-          pageAnimate: {
-            opacity: 1,
-          },
-        }}
-      >
-          <Component {...pageProps} />
-          <Footer />
-          <Fab />
-      </motion.div>
-    );
-  }
   return (
     <motion.div
       key={router.route}

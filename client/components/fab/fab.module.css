@@ -19,7 +19,7 @@
   border-radius: .25rem;
   box-shadow: 4px 4px 8px #43543d, inset 0px 0px 0px #43543d;
   box-sizing: border-box;
-  color: var(--color-footer);
+  color: var(--color-main);
   cursor: pointer;
   display: inline-flex;
   font-size: 16px;
@@ -44,7 +44,7 @@
   border-color: rgba(158, 223, 220, 1);
   box-shadow: rgba(67, 84, 61, 1)
   0px 10px 20px, rgba(67, 84, 61, 1) 0px 8px 8px;
-  color: var(--color-footer);
+  color: var(--color-main);
 }
 
 .fab-container_button:hover {
