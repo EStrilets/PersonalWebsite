@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
+import { HiMenu } from 'react-icons/hi'
+import { IoClose } from 'react-icons/io5'
 import styles from './navbar.module.css'
 import ContactBtn from '../contactInfo/ContactBtn'
 import Logo from '../logo/Logo'
 import Link from 'next/link'
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion"
+import Tooltip from '../tooltip/Tooltip'
 
 const Menu = ({setToggleMenu}) => (
   <div className={styles['link-list']}>
@@ -37,7 +39,7 @@ const Menu = ({setToggleMenu}) => (
   </div>
 );
 
-export default function Navbar({ burgerMenu }) {
+export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   useEffect(() => {
@@ -72,7 +74,7 @@ export default function Navbar({ burgerMenu }) {
             >
               <div className={styles['menu-wrapper']}>
                 <div className={styles['menu-navbar']}>
-                  <RiCloseLine
+                  <IoClose
                     size={27}
                     onClick={() => setToggleMenu(false)}
                     className={styles['icon-close']}
@@ -91,15 +93,16 @@ export default function Navbar({ burgerMenu }) {
           </div>
         </div>
         <div className={styles['gpt3__navbar-sign']}>
-          {burgerMenu ? (
-            <RiMenu3Line
-              className={styles['icons']}
-              size={27}
-              onClick={() => setToggleMenu(true)}
-            />
-          ) : (
+          <>
             <ContactBtn />
-          )}
+            <Tooltip content='Menu' direction='bottom'>
+              <HiMenu
+                className={styles['icons']}
+                size={30}
+                onClick={() => setToggleMenu(true)}
+              />
+            </Tooltip>
+          </>
         </div>
       </div>
     </>

@@ -49,7 +49,6 @@
   line-height: 52px;
   height: 50px;
   width: 50px;
-  box-shadow: 0 5px 25px rgba(35, 79, 150, 0.479);
   margin: 15px 15px;
   font-size: 22px;
 }
@@ -72,12 +71,9 @@
   flex-shrink: 0;
   border-radius: 50%;
   text-align: center;
-  background: rgb(29, 55, 80); /* circle color */
+  background: var(--color-main); /* circle color */
   cursor: pointer;
   transition: all .4s ease;
-  box-shadow: 4px 4px 8px #43543d, -4px -4px 8px #ccecbb,
-  inset 0px 0px 0px #43543d, inset 0px 0px 0px #c0dcb0;
-
 }
 .slider-nav-item:before
 {
@@ -88,7 +84,7 @@
   top: -8px;
   left: -8px;
   border-radius: 50%;
-  border: 1px solid rgba(44, 181, 208, 0.554);
+  border: 0.5px solid var(--color-main);
   animation: 1.5s linear 0s normal none infinite focuse;
 }
 

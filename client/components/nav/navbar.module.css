@@ -55,7 +55,7 @@
   border-width: 0;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#f4d8c9 0 -3px 0 inset;
   box-sizing: border-box;
-  color: var(--color-footer);
+  color: var(--color-main);
   cursor: pointer;
   display: inline-flex;
   font-family: var(--font-family),monospace;
@@ -113,7 +113,7 @@
     flex-direction: column;
     
     text-align: end;
-    background: var(--color-footer);
+    background: var(--color-main);
     padding: 2rem;
     position: absolute;
     right: 0;
@@ -134,20 +134,23 @@
 
 
 .icons { 
-    color: var(--color-footer)
+    color: var(--color-main);
+    cursor: pointer;
+}
+
+.icons:hover { 
+    color: rgb(112, 47, 150);
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
 }
 
 .menu {
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
     position: fixed;
     height: 100%;
     width: 100%;
     overflow:hidden;
     z-index: 1;
-    /* background: var(--color-footer); */
-    background: rgba(8, 33, 1, 0.8);
+    background: rgba(18, 16, 0, 0.85)    ;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 }
@@ -159,12 +162,12 @@
     align-items: center;
     font-size: 1.3rem;
     font-weight: 520;
-    color: rgb(233, 252, 230);
+    color: rgb(255, 255, 255);
 }
 
 .link-list p:hover { 
-    color: rgb(253, 255, 253);
-    text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255,1);
+    /* text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255,1); */
+    filter: drop-shadow(0 0 4px);
 }
 
 .menu-wrapper { 
@@ -184,13 +187,15 @@
 }
 
 .icon-close { 
-    color: rgb(233, 252, 230);
+    color: rgb(255, 255, 255);
     flex-grow: 1;
     margin-left: 15rem;
     transition: transform .2s;
+    cursor: pointer;
 }
 
 .icon-close:hover { 
     transform: scale(1.4);
     color: rgba(255,255,255,1);
+    filter: drop-shadow(0 0 6px)
 }

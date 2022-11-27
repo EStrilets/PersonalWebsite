@@ -12,14 +12,3 @@ export default function Project() {
     </div>
   );
 }
-
-Project.getLayout = function PageLayout(page) { 
-  return ( 
-    <>
-     <Navbar burgerMenu={true} />
-     <>
-     {page}
-     </>
-    </>
-  )
-}

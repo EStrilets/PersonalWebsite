@@ -22,20 +22,20 @@
     border:none;
     outline:none;
     border-radius: 1.2em;
-    color: var(--color-footer);
+    color: var(--color-main);
     font-size: 1.5rem;
     padding-left: 1.5rem;
     transition: all 500ms ease-in-out;
-    box-shadow: 0px 0px 0px white inset, 4px 4px 8px #9ec191, -4px -4px 8px #ccecbb;
+    box-shadow: 0px 0px 0px white inset, 4px 4px 8px #9998, -4px -4px 8px #9999;
 }
 
 .form__input:focus { 
-    box-shadow: inset 2px 2px 10px #6f8467, 0px 0px 0px white; 
+    box-shadow: inset 2px 2px 10px #9998, 0px 0px 0px white; 
 }
 
 
 .form__input::placeholder { 
-    color: var(--color-footer);
+    color: var(--color-main);
     opacity: 0.7
 }
 
@@ -54,35 +54,22 @@
     font-size: 1.5rem;
     padding-left: 1.5rem;
     transition: all 500ms ease-in-out;
-    box-shadow: 0px 0px 0px white inset, 4px 4px 8px #9ec191, -4px -4px 8px #ccecbb;
+    box-shadow: 0px 0px 0px white inset, 4px 4px 8px #9998, -4px -4px 8px #9999;
 }
 
 .form__input-message:focus { 
-    box-shadow: inset 2px 2px 10px #6f8467, 0px 0px 0px white; 
+    box-shadow: inset 2px 2px 10px #9998, 0px 0px 0px white; 
 }
 
 
 .form__input-message::placeholder { 
-    color: var(--color-footer);
+    color: var(--color-main);
     opacity: 0.7
-}
-
-.form__button-submit { 
-    width: 58%;
-    margin: auto;
-    height: 65px;
-    border-radius: 1.2em;
-    border:none;
-    outline:none;
-    font-size: 1.6rem;
-    background-color: #b8eda3;
-    color: #fff;
-    box-shadow: 0px 0px 0px white inset, 4px 4px 8px #9ec191, -4px -4px 8px #ccecbb;
 }
 
 .notification-container { 
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-footer);
+    color: var(--color-main);
 }

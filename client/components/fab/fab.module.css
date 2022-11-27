@@ -14,12 +14,14 @@
   
 .fab-container_button {
   align-items: center;
-  background: linear-gradient(78deg, rgb(254, 206, 174) 0%, rgb(250, 124, 164) 100%);
-  border: 1px solid rgba(158, 223, 220, 1);
   border-radius: .25rem;
+  background: rgba(90, 41, 119, 0.75);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1.5px solid var(--color-main);
   box-shadow: 4px 4px 8px #43543d, inset 0px 0px 0px #43543d;
   box-sizing: border-box;
-  color: var(--color-footer);
+  color: var(--color-main);
   cursor: pointer;
   display: inline-flex;
   font-size: 16px;
@@ -41,10 +43,9 @@
 }
 
 .fab-container_button:hover {
-  border-color: rgba(158, 223, 220, 1);
   box-shadow: rgba(67, 84, 61, 1)
   0px 10px 20px, rgba(67, 84, 61, 1) 0px 8px 8px;
-  color: var(--color-footer);
+  color: #fff;
 }
 
 .fab-container_button:hover {
