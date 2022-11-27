@@ -10,7 +10,7 @@ export default function ContactBtn() {
         <Link href='/contact'>
           <div className={styles['spinner']} data-testid='contact-btn'>
             <Tooltip content='Contact' direction='bottom'>
-              <FiMail size={30} />
+              <FiMail className={styles['icon-mail']} size={30} />
             </Tooltip>
           </div>
         </Link>
