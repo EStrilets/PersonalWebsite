@@ -44,11 +44,10 @@
 .form__input-username {
     margin: 1rem;
     height: 3.5rem;
-    background: transparent;
     border: 1px solid rgb(228, 227, 227);
+    color: var(--color-main);
     outline: none;
     border-radius: .7em;
-    color: var(--color-main);
     font-size: 1.1rem;
     padding-left: 1rem;
     transition: all 500ms ease-in-out;
@@ -69,6 +68,10 @@
     box-shadow: inset 2px 2px 10px #9998, 0px 0px 0px white;
 }
 
+.form__input-username::placeholder {
+    color: var(--color-main);
+    opacity: 0.7
+}
 
 .form__input::placeholder {
     color: var(--color-main);
@@ -90,6 +93,7 @@
     font-size: 1.1rem;
     padding-left: 1rem;
     transition: all 500ms ease-in-out;
+    color: var(--color-main);
 }
 
 .form__input-message:focus {
