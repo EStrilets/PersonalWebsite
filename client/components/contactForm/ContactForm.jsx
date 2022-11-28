@@ -3,7 +3,8 @@ import styles from './form.module.css'
 import ContactFormBtn from './ContactFormBtn';
 
 export default function ContactForm() {
-  const [fullname, setFullname] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
@@ -22,8 +23,8 @@ export default function ContactForm() {
     let tempErrors = {};
     let isValid = true;
 
-    if (fullname.length <= 0) {
-      tempErrors["fullname"] = true;
+    if (firstName.length <= 0) {
+      tempErrors["firstName"] = true;
       isValid = false;
     }
     if (email.length <= 0) {
@@ -50,7 +51,8 @@ export default function ContactForm() {
       const res = await fetch("/api/mail", {
         body: JSON.stringify({
           email: email,
-          fullname: fullname,
+          firstName: firstName,
+          lastName: lastName,
           message: message,
         }),
         headers: {
@@ -65,7 +67,8 @@ export default function ContactForm() {
         setShowSuccessMessage(false);
         setShowFailureMessage(true);
         setButtonText("Send!");
-        setFullname("")
+        setFirstName("")
+        setLastName("")
         setEmail("")
         setMessage("")
         return;
@@ -73,7 +76,8 @@ export default function ContactForm() {
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
       setButtonText("Sent!");
-      setFullname("")
+      setFirstName("")
+      setLastName("")
       setEmail("")
       setMessage("")
     }
@@ -81,23 +85,37 @@ export default function ContactForm() {
 
   return (
     <div className={styles['form__container']}>
+      <p> Contact form </p>
       <form
         method='post'
         onSubmit={handleSubmit}
         className={styles['form__wrapper']}
       >
-        <input
-          type='text'
-          className={styles['form__input']}
-          placeholder='Name*'
-          name='name'
-          required
-          data-testid='username-input'
-          value={fullname}
-          onChange={(e) => {
-            setFullname(e.target.value);
-          }}
-        />
+        <div className={styles['username-wrapper']}>
+          <input
+            type='text'
+            className={styles['form__input-username']}
+            placeholder='First name*'
+            name='first-name'
+            required
+            data-testid='username-input'
+            value={firstName}
+            onChange={(e) => {
+              setFirstName(e.target.value);
+            }}
+          />
+          <input
+            type='text'
+            className={styles['form__input-username']}
+            placeholder='Last name*'
+            name='last-name'
+            required
+            value={lastName}
+            onChange={(e) => {
+              setLastName(e.target.value);
+            }}
+          />
+        </div>
         <input
           type='email'
           value={email}
@@ -122,21 +140,21 @@ export default function ContactForm() {
             setMessage(e.target.value);
           }}
         ></textarea>
-        {/* <button className={styles['form__button-submit']}>{buttonText}</button> */}
-        <ContactFormBtn onSumbit={handleSubmit} buttonText={buttonText} />
+        <button className={styles['form__button-submit']}>{buttonText}</button>
+        {/* <ContactFormBtn onSumbit={handleSubmit} buttonText={buttonText} /> */}
       </form>
       <div className={styles['notification-container']}>
         {showSuccessMessage && (
-          <p className={styles['notification-msg']}>
+          <p>
             Thank you! Your Message has been delivered.
           </p>
         )}
-          {showFailureMessage && (
-            <p className='text-red-500'>
-              Oops! Something went wrong, please try again.
-            </p>
-          )}
-        </div>
+        {showFailureMessage && (
+          <p>
+            Oops! Something went wrong, please try again.
+          </p>
+        )}
+      </div>
     </div>
   );
 }
