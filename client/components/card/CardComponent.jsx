@@ -9,7 +9,7 @@ export default function CardComponent({ children, newStyles }) {
     return (
       <motion.div
         className={newStyles}
-        style={{ x, y, rotateX, rotateY, z: 100 }}
+        style={{ x, y, rotateX, rotateY, }}
         drag
         dragElastic={0.16}
         dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
