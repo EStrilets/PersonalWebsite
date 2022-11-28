@@ -1,13 +1,12 @@
 const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
  export default async (req, res) => {
-   const { fullname, email, message } = req.body;
+   const { firstName, lastName, email, message } = req.body;
    const msg = {
      to: 'yevstrilets@gmail.com',
      from: 'eugenearcher3@gmail.com',
-     subject: `${fullname} sent you a message`,
+     subject: `${firstName + lastName} sent you a message`,
      text: email,
-     // html: `<strong>${message}</strong>`
      html: `<!DOCTYPE>
     <html lang="en">
     <head>
@@ -22,7 +21,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
       <div class="img-container" style="display: flex;justify-content: center;align-items: center;border-radius: 5px;overflow: hidden; font-family: 'helvetica', 'ui-sans';">              
             </div>
             <div class="container" style="margin-left: 20px;margin-right: 20px;">
-            <h3>You've got a new mail from ${fullname}, their email is: ✉️${email} </h3>
+            <h3>You've got a new mail from ${firstName + lastName}, their email is: ✉️${email} </h3>
             <div style="font-size: 16px;">
             <p>${message}</p>
             <br>

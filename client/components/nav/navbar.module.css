@@ -141,7 +141,7 @@
 .icons:hover { 
     color: rgb(112, 47, 150);
     cursor: pointer;
-    transition: all ease-in-out 400ms;
+    transition: all ease-in-out 300ms;
 }
 
 .menu {
