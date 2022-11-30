@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "node-mocks-http": "^1.12.1"
-  }
-}
