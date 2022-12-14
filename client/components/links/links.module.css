@@ -71,7 +71,7 @@
   flex-shrink: 0;
   border-radius: 50%;
   text-align: center;
-  background: var(--color-main); /* circle color */
+  background: var(--color-links); /* circle color */
   cursor: pointer;
   transition: all .4s ease;
 }

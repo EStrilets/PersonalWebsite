@@ -13,7 +13,7 @@
     transform: translateX(-50%);
     padding: 0.5rem;
     color: var(--color-bg);
-    background: rgb(25, 25, 25);
+    background: var(--color-tooltip);
     backdrop-filter: blur(17.7px);
     -webkit-backdrop-filter: blur(17.7px);
     font-size: 14px;

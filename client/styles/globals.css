@@ -3,14 +3,26 @@
 
   --color-bg: #fbfbf4;
   --color-main: #1b0c02;
-  --color-blog: #251307;
+  --color-card: #ffff;
+  --color-tooltip: #1b0c02;
   --color-text: #81AFDD;
   --color-subtext: #FF8A71;
   --color-main-button: #FF4820;
+  --color-links: #1b0c02;
 
   --font-size-header: 38px;
   --font-size-subheader: 26px;
   --font-size-main: 20px;
+}
+
+[data-theme='dark'] {
+  --color-bg: #fbfbf4;
+  --color-main: #181635;
+  --color-card: rgb(29, 29, 53);
+  --color-tooltip: #1b0c02;
+  --color-text: #81AFDD;
+  --color-subtext: #FF8A71;
+  --color-main-button: #FF4820;
 }
 
 html,

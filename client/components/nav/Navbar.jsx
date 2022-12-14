@@ -7,6 +7,7 @@ import Logo from '../logo/Logo'
 import Link from 'next/link'
 import { motion, AnimatePresence } from "framer-motion"
 import Tooltip from '../tooltip/Tooltip'
+import ThemeToggle from '../ThemeToggle/ThemeToggle'
 
 const Menu = ({setToggleMenu}) => (
   <div className={styles['link-list']}>
@@ -94,6 +95,7 @@ export default function Navbar() {
         </div>
         <div className={styles['gpt3__navbar-sign']}>
           <>
+            <ThemeToggle />
             <ContactBtn />
             <Tooltip content='Menu' direction='bottom'>
               <HiMenu
